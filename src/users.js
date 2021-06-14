@@ -49,16 +49,18 @@ export const UsersEdit = props => (
 
 export const UsersCreate = props => (
     <Create {...props}>
-        <TextInput source="id" />
-        <TextInput source="name" />
-        <TextInput source="occupation" />
-        <TextInput source="address.streetAddress" />
-        <TextInput source="address.apt" />
-        <TextInput source="address.city" />
-        <TextInput source="address.state" />
-        <TextInput source="address.zipcode" />
-        <ArrayInput source="hobbies">
-            <HobbiesCustomIterator />
-        </ArrayInput>
+        <SimpleForm>
+            <TextInput source="id" />
+            <TextInput source="name" />
+            <TextInput source="occupation" />
+            <TextInput source="address.streetAddress" />
+            <TextInput source="address.apt" />
+            <TextInput source="address.city" />
+            <TextInput source="address.state" />
+            <TextInput source="address.zipcode" />
+            <ArrayInput source="hobbies">
+                <HobbiesCustomIterator />
+            </ArrayInput>
+        </SimpleForm>
     </Create>
 );
